@@ -26,11 +26,15 @@ namespace ClinicaMedica
                "~/Content/js/sb-admin-2.min.js",
                "~/Content/vendor/chart.js/Chart.min.js",
                "~/Content/js/demo/chart-area-demo.js",
-               "~/Content/js/demo/chart-pie-demo.js"));
+               "~/Content/js/demo/chart-pie-demo.js",
+               "~/Content/vendor/datatables/jquery.dataTables.min.js",
+               "~/Content/vendor/datatables/dataTables.bootstrap4.min.js",
+               "~/Content/js/demo/datatables-demo.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/vendor/fontawesome-free/css/all.min.css",
-                 "~/Content/css/sb-admin-2.min.css"));
+                 "~/Content/css/sb-admin-2.min.css",
+                 "~/Content/vendor/datatables/dataTables.bootstrap4.min.css"));
         }
     }
 }

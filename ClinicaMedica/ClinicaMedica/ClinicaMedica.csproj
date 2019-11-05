@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SecretariaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1928,7 +1929,12 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Navegacion.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Auth\Login.cshtml" />
+    <Content Include="Views\Secretaria\crearPaciente.cshtml" />
+    <Content Include="Views\Secretaria\ModificarPaciente.cshtml" />
+    <Content Include="Views\Secretaria\Home.cshtml" />
+    <Content Include="Views\Secretaria\Paciente.cshtml" />
+    <Content Include="Views\Shared\_Topbar.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
