@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Paciente";
+    ViewBag.Title = "Control de citas";
 }
 @Html.Partial("Navigation")
 @Html.Partial("Topbar")
@@ -8,14 +8,14 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Pacientes</h1>
-    <p class="mb-4">Administracion de información de los pacientes</p>
-        <a href="crearPaciente" class="btn btn-success btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-plus"></i>
-                    </span>
-                    <span class="text">Nuevo paciente</span>
-        </a>
+    <h1 class="h3 mb-2 text-gray-800">Control de citas</h1>
+    <p class="mb-4">Administracion de citas de los pacientes</p>
+    <a href="CrearCita" class="btn btn-success btn-icon-split">
+        <span class="icon text-white-50">
+            <i class="fas fa-plus"></i>
+        </span>
+        <span class="text">Nueva cita</span>
+    </a>
 
     <!-- DataTales  -->
     <div class="card shadow mb-4">
@@ -29,7 +29,7 @@
                             <th>Apellido</th>
                             <th>Direccion</th>
                             <th>Edad</th>
-                            <th>Fecha de registro</th>
+                            <th>Fecha y hora de cita</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -41,7 +41,10 @@
                             <td>61</td>
                             <td>2011/04/25</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -56,7 +59,10 @@
                             <td>63</td>
                             <td>2011/07/25</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -71,7 +77,10 @@
                             <td>66</td>
                             <td>2009/01/12</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -86,7 +95,10 @@
                             <td>22</td>
                             <td>2012/03/29</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -101,7 +113,10 @@
                             <td>33</td>
                             <td>2008/11/28</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -116,7 +131,10 @@
                             <td>61</td>
                             <td>2012/12/02</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -131,10 +149,13 @@
                             <td>59</td>
                             <td>2012/08/06</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
-                                <a href="#"  data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
                                     <i class="fas fa-trash"></i>
                                 </a>
                             </td>
@@ -146,7 +167,10 @@
                             <td>55</td>
                             <td>2010/10/14</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -161,7 +185,10 @@
                             <td>39</td>
                             <td>2009/09/15</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -176,7 +203,10 @@
                             <td>23</td>
                             <td>2008/12/13</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -191,7 +221,10 @@
                             <td>30</td>
                             <td>2008/12/19</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -206,7 +239,10 @@
                             <td>22</td>
                             <td>2013/03/03</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -221,7 +257,10 @@
                             <td>36</td>
                             <td>2008/10/16</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -236,7 +275,10 @@
                             <td>43</td>
                             <td>2012/12/18</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -251,7 +293,10 @@
                             <td>19</td>
                             <td>2010/03/17</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -259,111 +304,7 @@
                                 </a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>Michael Silva</td>
-                            <td>Marketing Designer</td>
-                            <td>London</td>
-                            <td>66</td>
-                            <td>2012/11/27</td>
-                            <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
-                                    <i class="fas fa-pen"></i>
-                                </a>
-                                <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Paul Byrd</td>
-                            <td>Chief Financial Officer (CFO)</td>
-                            <td>New York</td>
-                            <td>64</td>
-                            <td>2010/06/09</td>
-                            <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
-                                    <i class="fas fa-pen"></i>
-                                </a>
-                                <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Gloria Little</td>
-                            <td>Systems Administrator</td>
-                            <td>New York</td>
-                            <td>59</td>
-                            <td>2009/04/10</td>
-                            <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
-                                    <i class="fas fa-pen"></i>
-                                </a>
-                                <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Bradley Greer</td>
-                            <td>Software Engineer</td>
-                            <td>London</td>
-                            <td>41</td>
-                            <td>2012/10/13</td>
-                            <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
-                                    <i class="fas fa-pen"></i>
-                                </a>
-                                <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Dai Rios</td>
-                            <td>Personnel Lead</td>
-                            <td>Edinburgh</td>
-                            <td>35</td>
-                            <td>2012/09/26</td>
-                            <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
-                                    <i class="fas fa-pen"></i>
-                                </a>
-                                <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Jenette Caldwell</td>
-                            <td>Development Lead</td>
-                            <td>New York</td>
-                            <td>30</td>
-                            <td>2011/09/03</td>
-                            <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
-                                    <i class="fas fa-pen"></i>
-                                </a>
-                                <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Yuri Berry</td>
-                            <td>Chief Marketing Officer (CMO)</td>
-                            <td>New York</td>
-                            <td>40</td>
-                            <td>2009/06/25</td>
-                            <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
-                                    <i class="fas fa-pen"></i>
-                                </a>
-                                <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
+
                         <tr>
                             <td>Caesar Vance</td>
                             <td>Pre-Sales Support</td>
@@ -371,7 +312,10 @@
                             <td>21</td>
                             <td>2011/12/12</td>
                             <td>
-                                <a href="ModificarPaciente" class="btn btn-warning btn-circle">
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-circle">
+                                    <i class="fas fa-calendar-check"></i>
+                                </a>
+                                <a href="ModificarCita" class="btn btn-warning btn-circle">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="#" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger btn-circle">
@@ -387,18 +331,40 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">¿Desea eliminar este expediente del sistema?</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">¿Desea eliminar esta cita del sistema?</h5>
                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                Seleccione "Eliminar" si desea eliminar de forma permanente el expediente del sistema.<br />
-                                Seleccione "Cancelar" si desea hacer algun cambio o ya no desea eliminar este expediente.
+                                Seleccione "Eliminar" si desea eliminar de forma permanente la cita del sistema.<br />
+                                Seleccione "Cancelar" si desea hacer algun cambio o ya no desea eliminar esta cita.
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-info" type="button" data-dismiss="modal">Cacelar</button>
                                 <a class="btn btn-danger" href="#">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Send Modal-->
+                <div class="modal fade" id="sendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">¿El paciente se presento a su cita?</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Seleccione "Enviar" si desea enviar el paciente a consulta.<br />
+                                Seleccione "Cancelar" si desea hacer algun cambio o desea eliminar esta cita.
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cacelar</button>
+                                <a class="btn btn-success" href="#">Enviar</a>
                             </div>
                         </div>
                     </div>

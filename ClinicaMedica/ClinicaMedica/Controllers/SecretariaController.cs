@@ -9,11 +9,7 @@ namespace ClinicaMedica.Controllers
     public class SecretariaController : Controller
     {
         // GET: Secretaria
-        public ActionResult CrearPaciente()
-        {
-            return View();
-        }
-        public ActionResult ModificarPaciente()
+        public ActionResult Index()
         {
             return View();
         }
@@ -22,6 +18,38 @@ namespace ClinicaMedica.Controllers
             return View();
         }
         public ActionResult Paciente()
+        {
+            return View();
+        }
+        public ActionResult CrearPaciente()
+        {
+            return View();
+        }
+        public ActionResult ModificarPaciente()
+        {
+            return View();
+        }
+        public ActionResult Cita()
+        {
+            return View();
+        }
+        public ActionResult CrearCita()
+        {
+            return View();
+        }
+        public ActionResult ModificarCita()
+        {
+            return View();
+        }
+        public ActionResult DetalleCita()
+        {
+            return View();
+        }
+        public ActionResult Consulta()
+        {
+            return View();
+        }
+        public ActionResult DetalleConsulta()
         {
             return View();
         }

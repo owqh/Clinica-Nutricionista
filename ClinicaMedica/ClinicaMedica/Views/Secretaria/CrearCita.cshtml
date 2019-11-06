@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Creacion de citas";
+}
+@Html.Partial("Navigation")
+@Html.Partial("Topbar")
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="col-xl-12 col-lg-7 ">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Crear citas de paciente</h1>
+
+        </div>
+        <div class="content-wrapper">
+            <div class="col-md-12 col-sm-1 col-xl-12">
+                <div class="card  shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Ingrese los datos del paciente</h6>
+                    </div>
+                    <div class="card-body">
+                        <form class="cita">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Buscar paciente</span></h6>
+                                    <input class="form-control" type="text" id="NombresPaciente" required placeholder="Buscar ... " pattern="[A-Za-z]">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Buscar por </span></h6>
+                                    <select id="inputState" class="form-control">
+                                        <option>Codigo de expediente</option>
+                                        <option>Nombres</option>
+                                        <option>Apellidos</option>
+                                        <option>Dui</option>
+                                        <option>Numero de telefono</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="Cita" class="btn btn-warning btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </span>
+                                    <span class="text">Regresar</span>
+                                </a>
+                                <a href="#" class="btn btn-success btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                    <span class="text">Buscar paciente</span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Table for search-->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Resultados</h1>
+
+                </div>
+                <div class="card shadow mb-4">
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="90%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Codigo</th>
+                                        <th>Nombres</th>
+                                        <th>Apellidos</th>
+                                        <th>Edad</th>
+                                        <th>DUI</th>
+                                        <th>Telefono</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>TN102019</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>Architect</td>
+                                        <td>61</td>
+                                        <td>021562145</td>
+                                        <td>22000000</td>
+                                        <td>
+                                            <a href="DetalleCita" class="btn btn-success btn-circle">
+                                                <i class="fas fa-plus-circle"></i>
+                                            </a>                
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GW292013</td>
+                                        <td>Garrett Winters</td>
+                                        <td>Tokyo</td>
+                                        <td>63</td>
+                                        <td>021562145</td>
+                                        <td>29999999</td>
+                                        <td>
+                                            <a href="DetalleCita" class="btn btn-success btn-circle">
+                                                <i class="fas fa-plus-circle"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>AC362016</td>
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Author</td>
+                                        <td>66</td>
+                                        <td>020365985</td>
+                                        <td>70005555</td>
+                                        <td>
+                                            <a href="DetalleCita" class="btn btn-success btn-circle" alt="Agregar cita">
+                                                <i class="fas fa-plus-circle"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Main Content -->
+
+
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+</div>
+@Html.Partial("Footer")
+
+

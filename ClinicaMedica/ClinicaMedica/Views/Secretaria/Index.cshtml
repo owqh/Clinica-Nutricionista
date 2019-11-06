@@ -1,0 +1,164 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+@Html.Partial("Navigation")
+@Html.Partial("Topbar")
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Citas proximas</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Pacientes Card  -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Incremento de pasientes (mensual)</div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pending Requests Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pasientes atendidos (mensual)</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Acciones -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card shadow mb-6">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Administracion de consultas</h6>
+                    </div>
+                    <div class="card-body">
+                        <a href="Consulta" class="btn btn-info btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-book-medical"></i>
+                            </span>
+                            <span class="text">Revisar consultas</span>
+                        </a>
+
+                        <a href="#" class="btn btn-success btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-book-open"></i>
+                            </span>
+                            <span class="text">Preparar pacientes</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 pl-lg-3">
+                <div class="card shadow mb-6">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Administracion de pacientes</h6>
+                    </div>
+                    <div class="card-body">
+                        <a href="Paciente" class="btn btn-primary btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-address-book"></i>
+                            </span>
+                            <span class="text">Revisar pacientes</span>
+                        </a>
+
+                        <a href="crearPaciente" class="btn btn-success btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-user-plus"></i>
+                            </span>
+                            <span class="text">Crear nuevo expediente</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 pt-lg-4">
+            <div class="card shadow mb-6">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Administracion de citas</h6>
+                </div>
+                <div class="card-body">
+                    <a href="Cita" class="btn btn-success btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-check-double"></i>
+                        </span>
+                        <span class="text">Revisar citas</span>
+                    </a>
+
+                    <a href="CrearCita" class="btn btn-warning btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-calendar-check"></i>
+                        </span>
+                        <span class="text">Crear nueva Cita</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        
+
+
+
+    </div>
+
+    <!-- Content Row -->
+<!-- /.container-fluid -->
+
+
+
+
+
+@Html.Partial("Footer")

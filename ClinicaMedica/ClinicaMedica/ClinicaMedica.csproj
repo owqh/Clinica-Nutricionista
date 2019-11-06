@@ -1920,6 +1920,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Scripts\" />
+    <Folder Include="Views\Doctor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1935,6 +1936,16 @@
     <Content Include="Views\Secretaria\Home.cshtml" />
     <Content Include="Views\Secretaria\Paciente.cshtml" />
     <Content Include="Views\Shared\_Topbar.cshtml" />
+    <Content Include="Views\Secretaria\Navigation.cshtml" />
+    <Content Include="Views\Secretaria\Footer.cshtml" />
+    <Content Include="Views\Secretaria\Topbar.cshtml" />
+    <Content Include="Views\Secretaria\Cita.cshtml" />
+    <Content Include="Views\Secretaria\Consulta.cshtml" />
+    <Content Include="Views\Secretaria\Index.cshtml" />
+    <Content Include="Views\Secretaria\CrearCita.cshtml" />
+    <Content Include="Views\Secretaria\ModificarCita.cshtml" />
+    <Content Include="Views\Secretaria\DetalleCita.cshtml" />
+    <Content Include="Views\Secretaria\DetalleConsulta.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
