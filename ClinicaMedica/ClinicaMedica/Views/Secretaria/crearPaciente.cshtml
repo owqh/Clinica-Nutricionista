@@ -2,207 +2,145 @@
     ViewBag.Title = "crearPaciente";
 }
 @Html.Partial("_Navegacion")
+@Html.Partial("_Topbar")
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-    <style>
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-    </style>
-</head>
-<!-- Content Wrapper -->
-<div id="content-wrapper" class="d-flex flex-column">
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-    <!-- Main Content -->
-    <div id="content-wrapper">
+    <!-- Page Heading -->
+    <div class="col-xl-12 col-lg-7 ">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Crear expediente de paciente</h1>
 
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-            <!-- Sidebar Toggle (Topbar) -->
-            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                <i class="fa fa-bars">sdss</i>
-            </button>
-
-            <!-- Topbar Navbar -->
-            <ul class="navbar-nav ml-auto">
-
-                <!-- Nav Item - User Information -->
-                <li class="nav-item dropdown no-arrow">
-                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Oscar Quintanilla</span>
-                        <img class="img-profile rounded-circle" src="https://source.unsplash.com/qsjM7zomoEI/60x60">
-                    </a>
-                    <!-- Dropdown - User Information -->
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Perfil
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Configuracion
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Activity Log
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Cerrar session
-                        </a>
+        </div>
+        <div class="content-wrapper">
+            <div class="col-md-12 col-sm-1 col-xl-12">
+                <div class="card  shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Ingrese los datos del paciente</h6>
                     </div>
-                </li>
-
-            </ul>
-
-        </nav>
-        <!-- End of Topbar -->
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-            <!-- Page Heading -->
-            <div class="col-xl-8 col-lg-7 ">
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Crear expediente de paciente</h1>
-
-                </div>
-                <div class="content-wrapper">
-                    <div class="col-md-12 col-sm-1 col-xl-12">
-                        <div class="card shadow mb-7">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Ingrese los datos del paciente</h6>
+                    <div class="card-body">
+                        <form class="user">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Nombres</span></h6>
+                                    <input class="form-control" type="text" id="NombresPaciente" required placeholder="Nombres" pattern="[A-Za-z]">
+                                </div>
+                                <div class="col-sm-6">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Apellidos</span></h6>
+                                    <input class="form-control" type="text" id="ApellidosPaciente" placeholder="Apellidos" pattern="[A-Za-z]">
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <form class="user">
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Nombres</span></h6>
-                                            <input class="form-control" type="text" id="NombresPaciente">
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Apellidos</span></h6>
-                                            <input class="form-control" type="text" id="ApellidosPaciente">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Dirección</span></h6>
-                                        <input class="form-control" type="text" id="DireccionPaciente" />
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">DUI</span></h6>
-                                            <input class="form-control" type="number" id="DUIPaciente" />
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Fecha de nacimiento</span></h6>
-                                            <input id="datepicker" width="276" placeholder="DD/MM/AAAA" />
-                                            <script>
-                                                $('#datepicker').datepicker({
-                                                    uiLibrary: 'bootstrap4'
-                                                });
-                                            </script>
-                                        </div>
-                                    </div>
-                                    <div class=" form-group row">
-                                        <div class="form-group col-md-4">
-                                            <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Sexo</span></h6>
-                                            <select id="inputState" class="form-control">
-                                                <option>Femenino</option>
-                                                <option>Masculino</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Correo electrónico</span></h6>
-                                            <input class="form-control" type="text" id="CorreoPaciente" placeholder="correo@ejemplo.com">
+                            <div class="form-group">
+                                <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Dirección</span></h6>
+                                <textarea class="form-control" id="DireccionPaciente" rows="3" maxlength="300" required placeholder="Dirección del paciente"></textarea>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">DUI</span></h6>
+                                    <input class="form-control" type="number" id="DUIPaciente" min="0" placeholder="00000000-0" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Fecha de nacimiento</span></h6>
+                                    <input type="date" class="form-control" id="datepicker" />
 
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Estado civil</span></h6>
-                                            <select id="inputState" class="form-control">
-                                                <option>Soltero</option>
-                                                <option>Casado</option>
-                                                <option>Divorciado</option>
-                                                <option>Acompañado</option>
-                                                <option>Viudo</option>
-                                            </select>
-                                        </div>
+                                </div>
+                            </div>
+                            <div class=" form-group row">
+                                <div class="form-group col-md-4">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Sexo</span></h6>
+                                    <select id="inputState" class="form-control">
+                                        <option>Femenino</option>
+                                        <option>Masculino</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Correo electrónico</span></h6>
+                                    <input class="form-control" type="text" id="CorreoPaciente" placeholder="correo@ejemplo.com">
+
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Estado civil</span></h6>
+                                    <select id="inputState" class="form-control">
+                                        <option>Soltero</option>
+                                        <option>Casado</option>
+                                        <option>Divorciado</option>
+                                        <option>Acompañado</option>
+                                        <option>Viudo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-2 mb-3 mb-sm-0">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Peso (Lb) </span></h6>
+                                    <input class="form-control" type="number" id="PesoPaciente" min="0" placeholder="000" max="999">
+                                </div>
+                                <div class="col-sm-2 col-md-3">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Altura (cm)</span></h6>
+                                    <input class="form-control" type="number" id="AlturaPaciente" min="0" max="225" placeholder="000">
+                                </div>
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Teléfono</span></h6>
+                                    <input class="form-control" type="number" id="TelefonoPaciente" placeholder="0000-0000" min="20000000" max="29999999" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Alergias</span></h6>
+                                <input class="form-control" type="text" id="DireccionPaciente" placeholder="Alergia1, Alergia2" />
+                            </div>
+                            <div class="form-group">
+                                <h6 class="m-0 font-weight-bold text-primary"><span class="label label-default">Padecimientos previos</span></h6>
+                                <input class="form-control" type="text" id="DireccionPaciente" placeholder="Descripcion de padecimientos anteriores" />
+                            </div>
+                            <div>
+                                <a href="Paciente" class="btn btn-warning btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </span>
+                                    <span class="text">Regresar</span>
+                                </a>
+                                <a href="#" data-toggle="modal" data-target="#sendModal" class="btn btn-success btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span class="text">Crear expediente</span>
+                                </a>
+
+                            </div>
+
+                        </form>
+
+                        <!-- Send Modal-->
+                        <div class="modal fade" id="sendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">¿Desea crear el expediente en el sistema?</h5>
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
                                     </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-2 mb-3 mb-sm-0">
-                                            <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Peso</span></h6>
-                                            <input class="form-control" type="number" id="PesoPaciente">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Altura</span></h6>
-                                            <input class="form-control" type="number" id="AlturaPaciente">
-                                        </div>
-                                        <div class="col-sm-4 mb-3 mb-sm-0">
-                                            <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Teléfono</span></h6>
-                                            <input class="form-control" type="number" id="TelefonoPaciente" />
-                                        </div>
+                                    <div class="modal-body">
+                                        Seleccione "Guardar" si está listo/a para finalizar la creacion del expediente.<br />
+                                        Seleccione "Cancelar si desea hacer algun cambio o ya no desea crear el expediente".
                                     </div>
-                                    <div class="form-group">
-                                        <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Alergias</span></h6>
-                                        <input class="form-control" type="text" id="DireccionPaciente" />
+                                    <div class="modal-footer">
+                                        <button class="btn btn-danger" type="button" data-dismiss="modal">Cacelar</button>
+                                        <a class="btn btn-success" href="#">Guardar</a>
                                     </div>
-                                    <div class="form-group">
-                                        <h6 class="m-0 font-weight-bold text-primary"<span class="label label-default">Padecimientos previos</span></h6>
-                                        <input class="form-control" type="text" id="DireccionPaciente" />
-                                    </div>
-                                    <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                        Crear expediente
-                                    </a>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
-
-                    <!-- End of Main Content -->
-
-
-                </div>
-                <!-- End of Content Wrapper -->
-            </div>
-            <!-- End of Page Wrapper -->
-        </div>
-    </div>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">¿Nombre desea salir del sistema?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Seleccione "Cerrar sesión" si está listo/a para finalizar su sesión actual y cerrar el sistema.
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cacelar</button>
-                    <a class="btn btn-primary" href="login.html">Cerrar sesión</a>
                 </div>
             </div>
-        </div>
-    </div>
+           <!-- End of Main Content -->
 
-    @Html.Partial("_Footer")
+
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+</div>
+@Html.Partial("_Footer")
 
